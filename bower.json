@@ -1,0 +1,24 @@
+{
+  "name": "flow-interfaces-angular",
+  "version": "0.0.0",
+  "homepage": "https://github.com/solnetdigital/flow-interfaces-angular",
+  "authors": [
+    "Michael Robinson <michael.robinson@solnet.co.nz>"
+  ],
+  "description": "Flow interfaces for Angular JS",
+  "main": "angular.js",
+  "keywords": [
+    "Angular",
+    "JS",
+    "Flow"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/main/webapp",
+    "test",
+    "tests"
+  ]
+}
