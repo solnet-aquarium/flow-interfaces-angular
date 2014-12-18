@@ -1,6 +1,6 @@
 declare class AngularJS {
+  copy(object: Object | Array): Object | Array;
   module(name: string, dependencies: Array<number | string>): Object;
-  copy(object: Object): Object;
 }
 
 declare var angular: AngularJS;
