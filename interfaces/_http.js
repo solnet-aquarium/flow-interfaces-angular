@@ -1,3 +1,4 @@
+/* jshint ignore: start */
 declare class AngularJS_HTTP {
   get(url: string): Promise
 }
