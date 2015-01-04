@@ -1,5 +1,9 @@
-declare var AngularJSIterable: Object | Array;
-declare var AngularJSStringNumber: string | number;
+/* jshint ignore: start */
+type AngularJSIterable = Object | Array;
+type AngularJSStringNumber = string | number;
+type AngularJSDependencyDirectiveFunction = (...args: any) => Object;
+type AngularJSDependencyControllerFunction = (...args: any) => void;
+type AngularJSDependencyFactoryFunction = (...args: any) => void;
 
 declare class AngularJSCallbacks {
   css(index: number, value: string): AngularJSStringNumber;
@@ -17,16 +21,17 @@ declare class AngularJSJQueryLite {
 }
 
 declare class AngularJSModule {
-  controller(name: string, dependencies: Array<Function | string>): AngularJSModule;
-  directive(name: string, directiveFactory: Array<Function | string>): AngularJSModule;
-  directive(name: { name: Array<Function | string> }): AngularJSModule;
-  factory(name: string, providerFunction: Array<Function | string>): AngularJSModule;
-  factory(name: string, providerFunction: Function): AngularJSModule;
+  controller(name: string, dependencies: Array<AngularJSDependencyControllerFunction | string>): AngularJSModule;
+  directive(name: string, directiveFactory: Array<AngularJSDependencyDirectiveFunction | string>): AngularJSModule;
+  directive(name: { name: Array<AngularJSDependencyDirectiveFunction | string> }): AngularJSModule;
+  factory(name: string, providerFunction: Array<AngularJSDependencyFactoryFunction | string>): AngularJSModule;
+  factory(name: string, providerFunction: AngularJSDependencyFactoryFunction): AngularJSModule;
   value(name: string, object: any): AngularJSModule;
 }
 
 declare class AngularJS {
-  copy(object: Object | Array): Object | Array;
+  // copy(object: Object | Array): Object | Array;
+  copy<T>(object: T): T;
   element(element: string | Element): AngularJSJQueryLite;
   extend<T>(dst: T, src: Object): T;
   forEach(obj: AngularJSIterable, iterator: AngularJSCallbacks.iterator): AngularJSIterable;
