@@ -23,10 +23,12 @@ declare class AngularJSJQueryLite {
 declare class AngularJSModule {
   controller(name: string, dependencies: Array<AngularJSDependencyControllerFunction | string>): AngularJSModule;
   directive(name: string, directiveFactory: Array<AngularJSDependencyDirectiveFunction | string>): AngularJSModule;
+  directive(name: string, directiveFactory: Function): AngularJSModule;
   directive(name: { name: Array<AngularJSDependencyDirectiveFunction | string> }): AngularJSModule;
   factory(name: string, providerFunction: Array<AngularJSDependencyFactoryFunction | string>): AngularJSModule;
   factory(name: string, providerFunction: AngularJSDependencyFactoryFunction): AngularJSModule;
   value(name: string, object: any): AngularJSModule;
+  constant(name: string, object: any): AngularJSModule;
 }
 
 declare class AngularJS {
