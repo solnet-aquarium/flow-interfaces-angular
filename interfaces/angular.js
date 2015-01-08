@@ -39,6 +39,7 @@ declare class AngularJS {
   forEach(obj: AngularJSIterable, iterator: AngularJSCallbacks.iterator): AngularJSIterable;
   forEach(obj: AngularJSIterable, iterator: AngularJSCallbacks.iterator, context: Object): AngularJSIterable;
   module(name: string, dependencies: Array<string>): AngularJSModule;
+  module(name: string): AngularJSModule;
 }
 
 declare var angular: AngularJS;
