@@ -2,6 +2,10 @@
 
 Flow interfaces allowing the use of Facebook's [Flow][flow] with [Angular JS][angularjs] projects.
 
+## Note
+
+Until https://github.com/facebook/flow/issues/199 is resolved, this repository is unfortunately less useful than one might hope.
+
 ## Usage
 
  - `bower install --save flow-interfaces-angular`
